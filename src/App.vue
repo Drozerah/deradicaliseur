@@ -1,21 +1,21 @@
 <template>
   <div id="app">
     <header>
-      <img alt="Vue logo" src="./assets/bandeau.jpg">
-      <h1 class="site-title">{{ siteTitle }}</h1>
+      <img alt="Vue logo" src="./assets/bandeau.jpg" v-if="displayLogo">
+      <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
       <nav class="navigate">
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
-        </ul> 
-             
+        </ul>          
       </nav>
     </header>
     <main class="main">
       <router-view/>
     </main>
     <footer class="footer">
-      {{ footer }}
+      <img alt="Vue logo" src="./assets/bandeau.jpg" v-if="!displayLogo">
+      <div>{{ footer }}</div>
     </footer>
   </div>
 </template>
@@ -31,13 +31,25 @@ export default {
   data(){
     return{
       siteTitle: 'Le déradicaliseur',
-      footer: 'footer content'
+      isSiteTitle: false,
+      footer: 'footer content',
+      displayLogo: true
     }
+  },
+  mounted(){
+      this.isLogo()
   },
   watch: {
     '$route' () {
-      /* eslint-disable */
-      console.info('App currentRoute:', this.$router.currentRoute.path)
+      this.isLogo()
+    }
+  },
+  methods:{
+    isLogo(){
+      // get current url path
+      let path = this.$router.currentRoute.path
+      // set this.displayLogo according to path
+      path == '/' ? this.displayLogo = true : this.displayLogo = false
     }
   }
 
