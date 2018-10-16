@@ -4,7 +4,11 @@
       <img alt="Vue logo" src="./assets/bandeau.jpg">
       <h1 class="site-title">{{ siteTitle }}</h1>
       <nav class="navigate">
-        navigation
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/histoire">Histoire</router-link></li>
+          <li><router-link to="/couverture">La couv</router-link></li>
+        </ul>      
       </nav>
     </header>
     <main class="main">
