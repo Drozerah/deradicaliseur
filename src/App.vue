@@ -15,7 +15,7 @@
     </main>
     <footer class="footer">
       <img alt="Vue logo" src="./assets/bandeau.jpg" v-if="!displayLogo">
-      <div>{{ footer }}</div>
+      <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
     </footer>
   </div>
 </template>
@@ -33,7 +33,9 @@ export default {
       siteTitle: 'Le déradicaliseur',
       isSiteTitle: false,
       footer: 'footer content',
-      displayLogo: true
+      displayLogo: true,
+      copyright: '',
+      editeur: 'Les Editions R.J.T.P.'
     }
   },
   mounted(){
@@ -51,8 +53,11 @@ export default {
       // set this.displayLogo according to path
       path == '/' ? this.displayLogo = true : this.displayLogo = false
     }
+  },
+  created() {
+    let date = new Date()
+    this.copyright = 'Copyright ' + date.getFullYear()
   }
-
 }
 </script>
 
@@ -86,5 +91,14 @@ nav ul li:hover a {
 nav ul li a{
 color:white;
 text-decoration: none;
+}
+
+footer a {
+  padding: 5px;
+  color: inherit;
+}
+footer a:hover {
+  background-color:#CCCCCC;
+  color: yellow;
 }
 </style>
