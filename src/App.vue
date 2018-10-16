@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <img alt="Vue logo" src="./assets/bandeau.jpg">
-      <h1 class="site-title"></h1>
+      <h1 class="site-title">{{ siteTitle }}</h1>
       <nav class="navigate">
         navigation
       </nav>
@@ -26,6 +26,7 @@ export default {
   },
   data(){
     return{
+      siteTitle: 'Le déradicaliseur',
       footer: 'footer content'
     }
   }
