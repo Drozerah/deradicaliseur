@@ -11,12 +11,12 @@ export default new Router({
     {
         path: '/',
         name: 'home',
-        component: Home.vue
+        component: Home
     },
     {
         path: '/histoire',
         name: 'histoire',
-        component: Histoire.vue
+        component: Histoire
     }
   ]
 })

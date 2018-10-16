@@ -7,12 +7,12 @@
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
-          <li><router-link to="/couverture">La couv</router-link></li>
-        </ul>      
+        </ul> 
+             
       </nav>
     </header>
     <main class="main">
-      <Home/>
+      <router-view/>
     </main>
     <footer class="footer">
       {{ footer }}
