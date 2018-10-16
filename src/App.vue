@@ -33,7 +33,14 @@ export default {
       siteTitle: 'Le déradicaliseur',
       footer: 'footer content'
     }
+  },
+  watch: {
+    '$route' () {
+      /* eslint-disable */
+      console.info('App currentRoute:', this.$router.currentRoute.path)
+    }
   }
+
 }
 </script>
 
