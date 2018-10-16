@@ -46,4 +46,26 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+nav ul li {
+  display: inline;  
+  margin-left: 2px;
+}
+
+nav ul li a {
+  background-color:#CCCCCC;
+  padding: 5px;
+}
+
+nav ul li:hover a {
+  color:yellow;
+}
+
+.router-link-exact-active {
+  color: yellow;
+}
+
+nav ul li a{
+color:white;
+text-decoration: none;
+}
 </style>
