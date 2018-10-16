@@ -1,36 +1,44 @@
 <template>
   <article class="home">
     <header class="article-header">
-      <h1 class="article-title">{{title }}</h1>
+      <h1 class="article-title" v-show="isTitle">{{ title }}</h1>
+      <div class="flex-container">
+        <div class="flex-item"><img alt="BD image" src="../assets/le_deradicaliseur_p.jpg"></div>
+        <p class="flex-item">
+          Lui, <br>
+          il va au coeur des mécaniques <br>
+          et qu'importe si certains rouages <br>
+          n'aiment pas être exposés...
+        </p>
+      </div>
     </header>
   </article>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  data(){
-    return{
-      title: "Home component title"
+  export default {
+    name: 'Home',
+    data(){
+      return{
+        title: "Le déradicaliseur",
+        isTitle: false
+        
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+
+header p {
+  font-size: 22px;
+  text-align: left;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 </style>
