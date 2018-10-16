@@ -1,14 +1,18 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+  <article class="home">
+    <header class="article-header">
+      <h1 class="article-title">{{title }}</h1>
+    </header>
+  </article>
 </template>
 
 <script>
 export default {
   name: 'Home',
-  props: {
-    msg: String
+  data(){
+    return{
+      title: "Home component title"
+    }
   }
 }
 </script>

@@ -1,7 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/bandeau.jpg">
-    <Home msg="Welcome to Your Vue.js App"/>
+    <header>
+      <img alt="Vue logo" src="./assets/bandeau.jpg">
+      <h1 class="site-title"></h1>
+      <nav class="navigate">
+        navigation
+      </nav>
+    </header>
+    <main class="main">
+      <Home/>
+    </main>
+    <footer class="footer">
+      {{ footer }}
+    </footer>
   </div>
 </template>
 
@@ -12,6 +23,11 @@ export default {
   name: 'app',
   components: {
     Home
+  },
+  data(){
+    return{
+      footer: 'footer content'
+    }
   }
 }
 </script>
