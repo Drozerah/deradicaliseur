@@ -7,16 +7,17 @@ import Histoire from './components/Histoire.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-        path: '/',
-        name: 'home',
-        component: Home
-    },
-    {
-        path: '/histoire',
-        name: 'histoire',
-        component: Histoire
-    }
-  ]
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: '/histoire',
+            name: 'histoire',
+            component: Histoire
+        }
+    ]
 })
