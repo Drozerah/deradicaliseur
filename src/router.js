@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './components/Home.vue'
 import Histoire from './components/Histoire.vue'
 import Couverture from './components/Couverture.vue'
+import Plat_verso from './components/Plat_verso.vue'
 import Extraits from './components/Extraits.vue'
 import Actualites from './components/Actualites.vue'
 import Auteurs from './components/Auteurs.vue'
@@ -29,6 +30,11 @@ export default new Router({
             path: '/couverture',
             name: 'couverture',
             component: Couverture
+        },
+        {
+            path: '/plat_verso',
+            name: 'plat_verso',
+            component: Plat_verso
         },
         {
             path: '/extraits',
