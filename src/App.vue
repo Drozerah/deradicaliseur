@@ -5,7 +5,7 @@
       <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
       <nav class="navigate">
         <ul>
-          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/">||||||||</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
         </ul>          
       </nav>
@@ -70,6 +70,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* navigation */
+
 nav ul li {
   display: inline;  
   margin-left: 2px;
@@ -78,6 +81,8 @@ nav ul li {
 nav ul li a {
   background-color:#CCCCCC;
   padding: 5px;
+  color:white;
+  text-decoration: none;
 }
 
 nav ul li:hover a {
@@ -88,15 +93,17 @@ nav ul li:hover a {
   color: yellow;
 }
 
-nav ul li a{
-color:white;
-text-decoration: none;
+/* footer */
+
+footer{
+  margin-top: 20px;
 }
 
 footer a {
   padding: 5px;
   color: inherit;
 }
+
 footer a:hover {
   background-color:#CCCCCC;
   color: yellow;
