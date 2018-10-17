@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from './components/Home.vue'
 import Histoire from './components/Histoire.vue'
+import Dispo from './components/Dispo.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
             path: '/histoire',
             name: 'histoire',
             component: Histoire
+        },
+        {
+            path: '/disponibilites',
+            name: 'disponibilites',
+            component: Dispo
         }
     ]
 })
