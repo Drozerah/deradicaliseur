@@ -1,4 +1,6 @@
-# deradicaliseur
+# Le déradicaliseur
+
+> A landing page with Vue.js & Vue Router
 
 ## Project setup
 ```
