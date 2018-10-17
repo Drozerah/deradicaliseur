@@ -8,6 +8,7 @@
           <li><router-link to="/">||||||||</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
           <li><router-link to="/couverture">La couv</router-link></li>
+          <li><router-link to="/plat_verso">Le dos</router-link></li>
           <li><router-link to="/extraits">Extraits</router-link></li>
           <li><router-link to="/actualites">Actu</router-link></li>
           <li><router-link to="/auteurs">Auteurs</router-link></li>
