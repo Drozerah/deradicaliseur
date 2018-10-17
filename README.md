@@ -2,6 +2,8 @@
 
 > A landing page with Vue.js & Vue Router
 
+Single Page Application SPA using Vue.js and the Vue Router
+
 ## Project setup
 ```
 npm install
