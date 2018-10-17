@@ -78,6 +78,8 @@ export default {
   margin-top: 60px;
 }
 
+/* Global rules */
+
 /* navigation */
 
 nav ul {
@@ -91,6 +93,8 @@ nav ul li {
 
 nav ul li a {
   background-color:#CCCCCC;
+  /* Best accessibility contrast */
+  /* background-color:#010300; */
   padding: 5px;
   color:white;
   text-decoration: none;
@@ -117,6 +121,8 @@ footer a {
 
 footer a:hover {
   background-color:#CCCCCC;
+  /* Best accessibility contrast */
+  /* background-color:#010300; */
   color: yellow;
 }
 </style>
