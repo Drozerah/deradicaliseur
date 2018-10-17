@@ -13,7 +13,7 @@ import Dispo from './components/Dispo.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: [
         {
@@ -63,3 +63,15 @@ export default new Router({
         }
     ]
 })
+
+/* PageNotFound redirection */
+
+router.beforeEach((to, from, next) => {
+    if (!to.matched.length) {
+      next('/')
+    } else {
+      next()
+    }
+})
+
+export default router
