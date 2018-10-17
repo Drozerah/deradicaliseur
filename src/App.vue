@@ -80,6 +80,10 @@ export default {
 
 /* navigation */
 
+nav ul {
+    padding: 0px;
+}
+
 nav ul li {
   display: inline;  
   margin-left: 2px;
