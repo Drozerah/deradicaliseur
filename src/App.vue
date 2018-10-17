@@ -10,6 +10,7 @@
           <li><router-link to="/couverture">La couv</router-link></li>
           <li><router-link to="/extraits">Extraits</router-link></li>
           <li><router-link to="/actualites">Actu</router-link></li>
+          <li><router-link to="/auteurs">Auteurs</router-link></li>
           <li><router-link to="/disponibilites">Dispo</router-link></li>
         </ul>          
       </nav>
