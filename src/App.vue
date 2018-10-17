@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <header>
-      <img alt="Vue logo" src="./assets/bandeau.jpg" v-if="displayLogo">
+      <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
       <nav class="navigate">
         <ul>
-          <li><router-link to="/">||||||||</router-link></li>
+          <li><router-link to="/" >||||||||</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
           <li><router-link to="/couverture">La couv</router-link></li>
           <li><router-link to="/plat_verso">Le dos</router-link></li>
@@ -21,7 +21,7 @@
       <router-view/>
     </main>
     <footer class="footer">
-      <img alt="Vue logo" src="./assets/bandeau.jpg" v-if="!displayLogo">
+      <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="!displayLogo">
       <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
     </footer>
   </div>
