@@ -1,4 +1,4 @@
-# Le déradicaliseur
+![Image](https://github.com/Drozerah/le-deradicaliseur/raw/master/src/assets/bandeau.jpg)
 
 > A landing page with Vue.js & Vue Router
 
