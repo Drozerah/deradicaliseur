@@ -3,7 +3,7 @@
     <header class="article-header">
       <h1 class="article-title" v-show="isTitle">{{ title }}</h1>
       <div class="flex-container">
-        <div class="flex-item"><img alt="BD image" src="../assets/le_deradicaliseur_p.jpg"></div>
+        <div class="flex-item"><img alt="Le déradicaliseur image BD" src="../assets/le_deradicaliseur_p.jpg"></div>
         <p class="flex-item">
           Lui, <br>
           il va au coeur des mécaniques <br>
