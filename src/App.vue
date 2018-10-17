@@ -8,6 +8,7 @@
           <li><router-link to="/">||||||||</router-link></li>
           <li><router-link to="/histoire">Histoire</router-link></li>
           <li><router-link to="/couverture">La couv</router-link></li>
+          <li><router-link to="/extraits">Extraits</router-link></li>
           <li><router-link to="/disponibilites">Dispo</router-link></li>
         </ul>          
       </nav>
