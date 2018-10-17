@@ -6,6 +6,7 @@ import Histoire from './components/Histoire.vue'
 import Dispo from './components/Dispo.vue'
 import Couverture from './components/Couverture.vue'
 import Extraits from './components/Extraits.vue'
+import Actualites from './components/Actualites.vue'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
             path: '/extraits',
             name: 'extraits',
             component: Extraits
+        },
+        {
+            path: '/actualites',
+            name: 'actualites',
+            component: Actualites
         },
         {
             path: '/disponibilites',
