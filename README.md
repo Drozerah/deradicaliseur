@@ -6,4 +6,4 @@ Single Page Application SPA using Vue.js and the Vue Router
 
 > Project setup
 
-Please report to the [documentation](https://github.com/Drozerah/le-deradicaliseur/tree/documentation) folder of this repos
+Please report to the [documentation](https://github.com/Drozerah/le-deradicaliseur/tree/master/documentation) folder of this repos
