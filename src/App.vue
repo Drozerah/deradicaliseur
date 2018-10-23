@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <header>
+      <Carousel></Carousel>
       <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
       <nav class="navigate">
@@ -29,11 +30,12 @@
 
 <script>
 import Home from './components/Home.vue'
-
+import Carousel from './components/Carousel.vue'
 export default {
   name: 'app',
   components: {
-    Home
+    Home,
+    Carousel
   },
   data(){
     return{
