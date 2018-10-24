@@ -26,7 +26,7 @@
             <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       </div>
       <nav class="white  hide-on-small-only flex-container" role="navigation">
-        <ul class="nav-1">
+        <ul class="nav">
             <li><router-link to="/">||||||||</router-link></li>
             <li><router-link to="/histoire">Histoire</router-link></li>
             <li><router-link to="/couverture">La couv</router-link></li>
@@ -107,20 +107,16 @@ export default {
 
 /* Global rules */
 
-/* navigation */
-
-.nav-1 li{
-  display: inline-block;
-}
-
-.nav-1 a{
-  color: #333;
-}
-
 .flex-container{
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+
+/* navigation */
+
+.nav a{
+  color: #333;
 }
 
 /* Article */
