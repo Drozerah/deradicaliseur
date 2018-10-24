@@ -1,6 +1,57 @@
 <template>
   <div id="app">
     <header>
+      <!-- App Title -->
+      <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
+      <!-- Mobile nav -->
+      <nav class="yellow hide-on-med-and-up" role="navigation">
+        <div class="nav-wrapper ">
+          <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
+          <ul id="nav-mobile" class="sidenav">
+            <li><router-link to="/" >||||||||</router-link></li>
+            <li><router-link to="/histoire">Histoire</router-link></li>
+            <li><router-link to="/couverture">La couv</router-link></li>
+            <li><router-link to="/plat_verso">Le dos</router-link></li>
+            <li><router-link to="/extraits">Extraits</router-link></li>
+            <li><router-link to="/actualites">Actu</router-link></li>
+            <li><router-link to="/auteurs">Auteurs</router-link></li>
+            <li><router-link to="/bonus">Bonus</router-link></li>
+            <li><router-link to="/disponibilites">Dispo</router-link></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+      <!-- large screen nav -->
+      <div class="center">
+            <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
+      </div>
+      <nav class="white flex-container hide-on-med-and-down" role="navigation">
+        <ul class="nav-1">
+            <li><router-link to="/" >||||||||</router-link></li>
+            <li><router-link to="/histoire">Histoire</router-link></li>
+            <li><router-link to="/couverture">La couv</router-link></li>
+            <li><router-link to="/plat_verso">Le dos</router-link></li>
+            <li><router-link to="/extraits">Extraits</router-link></li>
+            <li><router-link to="/actualites">Actu</router-link></li>
+            <li><router-link to="/auteurs">Auteurs</router-link></li>
+            <li><router-link to="/bonus">Bonus</router-link></li>
+            <li><router-link to="/disponibilites">Dispo</router-link></li>
+        </ul>
+      </nav>
+    </header>
+  <br>
+  <br>
+
+
+
+
+
+
+
+
+
+
+<!--     <header>
       <Carousel></Carousel>
       <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
@@ -17,7 +68,10 @@
           <li><router-link to="/disponibilites">Dispo</router-link></li>
         </ul>          
       </nav>
-    </header>
+    </header> -->
+
+
+
     <main class="main">
       <router-view/>
     </main>
@@ -72,42 +126,30 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+/*   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px; */
 }
 
 /* Global rules */
 
 /* navigation */
 
-nav ul {
-    padding: 0px;
+.nav-1 li{
+  display: inline-block;
 }
 
-nav ul li {
-  display: inline;  
-  margin-left: 2px;
+.nav-1 a{
+  color: #333;
 }
 
-nav ul li a {
-  background-color:#CCCCCC;
-  /* Best accessibility contrast */
-  /* background-color:#010300; */
-  padding: 5px;
-  color:white;
-  text-decoration: none;
-}
-
-nav ul li:hover a {
-  color:yellow;
-}
-
-.router-link-exact-active {
-  color: yellow;
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 /* footer */
