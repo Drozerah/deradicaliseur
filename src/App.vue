@@ -8,15 +8,16 @@
         <div class="nav-wrapper ">
           <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
-            <li><router-link to="/" class="sidenav-close">||||||||</router-link></li>
-            <li><router-link to="/histoire" class="sidenav-close">Histoire</router-link></li>
-            <li><router-link to="/couverture" class="sidenav-close">La couv</router-link></li>
-            <li><router-link to="/plat_verso" class="sidenav-close">Le dos</router-link></li>
-            <li><router-link to="/extraits" class="sidenav-close">Extraits</router-link></li>
-            <li><router-link to="/actualites" class="sidenav-close">Actu</router-link></li>
-            <li><router-link to="/auteurs" class="sidenav-close">Auteurs</router-link></li>
-            <li><router-link to="/bonus" class="sidenav-close">Bonus</router-link></li>
-            <li><router-link to="/disponibilites" class="sidenav-close">Dispo</router-link></li>
+            <!-- this link will only be active at `/` -->
+            <router-link to="/" tag="li" active-class="active" exact><a class="sidenav-close">||||||||</a></router-link>
+            <router-link to="/histoire" tag="li" active-class="active"><a class="sidenav-close">Histoire</a></router-link>
+            <router-link to="/couverture" tag="li" active-class="active"><a class="sidenav-close">La couv</a></router-link>
+            <router-link to="/plat_verso" tag="li" active-class="active"><a class="sidenav-close">Le dos</a></router-link>
+            <router-link to="/extraits" tag="li" active-class="active"><a class="sidenav-close">Extraits</a></router-link>
+            <router-link to="/actualites" tag="li" active-class="active"><a class="sidenav-close">Actu</a></router-link>
+            <router-link to="/auteurs" tag="li" active-class="active"><a class="sidenav-close">Auteurs</a></router-link>
+            <router-link to="/bonus" tag="li" active-class="active"><a class="sidenav-close">Bonus</a></router-link>
+            <router-link to="/disponibilites" tag="li" active-class="active"><a class="sidenav-close">Dispo</a></router-link>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
@@ -25,17 +26,19 @@
       <div class="flex-container">
             <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       </div>
-      <nav class="white  hide-on-small-only flex-container" role="navigation">
-        <ul class="nav">
-            <li><router-link to="/">||||||||</router-link></li>
-            <li><router-link to="/histoire">Histoire</router-link></li>
-            <li><router-link to="/couverture">La couv</router-link></li>
-            <li><router-link to="/plat_verso">Le dos</router-link></li>
-            <li><router-link to="/extraits">Extraits</router-link></li>
-            <li><router-link to="/actualites">Actu</router-link></li>
-            <li><router-link to="/auteurs">Auteurs</router-link></li>
-            <li><router-link to="/bonus">Bonus</router-link></li>
-            <li><router-link to="/disponibilites">Dispo</router-link></li>
+      <nav class="nav white hide-on-small-only flex-container" role="navigation">
+        <ul>
+            <!-- this link will only be active at `/` -->
+            <!-- https://router.vuejs.org/api/#exact -->
+            <router-link to="/" tag="li" active-class="active" exact><a>||||||||</a></router-link>
+            <router-link to="/histoire" tag="li" active-class="active"><a>Histoire</a></router-link>
+            <router-link to="/couverture" tag="li" active-class="active"><a>La couv</a></router-link>
+            <router-link to="/plat_verso" tag="li" active-class="active"><a>Le dos</a></router-link>
+            <router-link to="/extraits" tag="li" active-class="active"><a>Extraits</a></router-link>
+            <router-link to="/actualites" tag="li" active-class="active"><a>Actu</a></router-link>
+            <router-link to="/auteurs" tag="li" active-class="active"><a>Auteurs</a></router-link>
+            <router-link to="/bonus" tag="li" active-class="active"><a>Bonus</a></router-link>
+            <router-link to="/disponibilites" tag="li" active-class="active"><a>Dispo</a></router-link>
         </ul>
       </nav>
     </header>
@@ -78,7 +81,7 @@ export default {
       this.isLogo()
       new M.Sidenav(this.$refs.sidenav, {
             edge: 'left',
-        })
+      })
   },
   watch: {
     '$route' () {
@@ -105,17 +108,21 @@ export default {
   margin-top: 0px;
 }
 
-/* Global rules */
+/* General */
 
-.flex-container{
+.flex-container {
   display: flex;
   justify-content: center;
   align-items: center; 
 }
 
-/* navigation */
+/* Navigation */
 
-.nav a{
+.nav {
+  margin-top: 0px;
+}
+
+.nav a {
   color: #333;
 }
 
@@ -125,9 +132,9 @@ article h1 {
   text-align: center;
 }
 
-/* footer */
+/* Footer */
 
-footer{
+footer {
   margin-top: 20px;
 }
 
