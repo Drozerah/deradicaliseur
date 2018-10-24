@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Home from './components/routes/Home.vue'
 import Carousel from './components/Carousel.vue'
 import M from 'materialize-css'
 

@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from './components/Home.vue'
-import Histoire from './components/Histoire.vue'
-import Couverture from './components/Couverture.vue'
-import Plat_verso from './components/Plat_verso.vue'
-import Extraits from './components/Extraits.vue'
-import Actualites from './components/Actualites.vue'
-import Auteurs from './components/Auteurs.vue'
-import Bonus from './components/Bonus.vue'
-import Dispo from './components/Dispo.vue'
+import Home from './components/routes/Home.vue'
+import Histoire from './components/routes/Histoire.vue'
+import Couverture from './components/routes/Couverture.vue'
+import Plat_verso from './components/routes/Plat_verso.vue'
+import Extraits from './components/routes/Extraits.vue'
+import Actualites from './components/routes/Actualites.vue'
+import Auteurs from './components/routes/Auteurs.vue'
+import Bonus from './components/routes/Bonus.vue'
+import Dispo from './components/routes/Dispo.vue'
 
 Vue.use(Router)
 
