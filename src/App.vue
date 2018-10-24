@@ -7,7 +7,7 @@
       <nav class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
           <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
-          <ul id="nav-mobile" class="sidenav">
+          <ul id="nav-mobile" class="sidenav" ref="sidenav">
             <li><router-link to="/" >||||||||</router-link></li>
             <li><router-link to="/histoire">Histoire</router-link></li>
             <li><router-link to="/couverture">La couv</router-link></li>
@@ -42,36 +42,6 @@
   <br>
   <br>
 
-
-
-
-
-
-
-
-
-
-<!--     <header>
-      <Carousel></Carousel>
-      <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
-      <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
-      <nav class="navigate">
-        <ul>
-          <li><router-link to="/" >||||||||</router-link></li>
-          <li><router-link to="/histoire">Histoire</router-link></li>
-          <li><router-link to="/couverture">La couv</router-link></li>
-          <li><router-link to="/plat_verso">Le dos</router-link></li>
-          <li><router-link to="/extraits">Extraits</router-link></li>
-          <li><router-link to="/actualites">Actu</router-link></li>
-          <li><router-link to="/auteurs">Auteurs</router-link></li>
-          <li><router-link to="/bonus">Bonus</router-link></li>
-          <li><router-link to="/disponibilites">Dispo</router-link></li>
-        </ul>          
-      </nav>
-    </header> -->
-
-
-
     <main class="main">
       <router-view/>
     </main>
@@ -85,6 +55,7 @@
 <script>
 import Home from './components/Home.vue'
 import Carousel from './components/Carousel.vue'
+import M from 'materialize-css'
 export default {
   name: 'app',
   components: {
@@ -103,6 +74,9 @@ export default {
   },
   mounted(){
       this.isLogo()
+      new M.Sidenav(this.$refs.sidenav, {
+            edge: 'left',
+        })
   },
   watch: {
     '$route' () {
