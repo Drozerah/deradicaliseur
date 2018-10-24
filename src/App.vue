@@ -24,7 +24,7 @@
       </nav>
       <!-- Larger than mobile size navigation -->
       <div class="flex-container">
-            <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
+            <img class="responsive-img" alt="Bandeau du site" src="@/assets/bandeau.jpg" v-if="displayLogo">
       </div>
       <nav class="nav white hide-on-small-only flex-container" role="navigation">
         <ul>
@@ -49,7 +49,7 @@
     </main>
     <footer class="footer container">
       <div class="center">
-            <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="!displayLogo">
+            <img class="responsive-img" alt="Bandeau du site" src="@/assets/bandeau.jpg" v-if="!displayLogo">
             <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
       </div>     
     </footer>
