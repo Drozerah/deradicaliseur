@@ -8,15 +8,15 @@
         <div class="nav-wrapper ">
           <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
-            <li><router-link to="/" >||||||||</router-link></li>
-            <li><router-link to="/histoire">Histoire</router-link></li>
-            <li><router-link to="/couverture">La couv</router-link></li>
-            <li><router-link to="/plat_verso">Le dos</router-link></li>
-            <li><router-link to="/extraits">Extraits</router-link></li>
-            <li><router-link to="/actualites">Actu</router-link></li>
-            <li><router-link to="/auteurs">Auteurs</router-link></li>
-            <li><router-link to="/bonus">Bonus</router-link></li>
-            <li><router-link to="/disponibilites">Dispo</router-link></li>
+            <li><router-link to="/" class="sidenav-close">||||||||</router-link></li>
+            <li><router-link to="/histoire" class="sidenav-close">Histoire</router-link></li>
+            <li><router-link to="/couverture" class="sidenav-close">La couv</router-link></li>
+            <li><router-link to="/plat_verso" class="sidenav-close">Le dos</router-link></li>
+            <li><router-link to="/extraits" class="sidenav-close">Extraits</router-link></li>
+            <li><router-link to="/actualites" class="sidenav-close">Actu</router-link></li>
+            <li><router-link to="/auteurs" class="sidenav-close">Auteurs</router-link></li>
+            <li><router-link to="/bonus" class="sidenav-close">Bonus</router-link></li>
+            <li><router-link to="/disponibilites" class="sidenav-close">Dispo</router-link></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
@@ -27,7 +27,7 @@
       </div>
       <nav class="white flex-container hide-on-med-and-down" role="navigation">
         <ul class="nav-1">
-            <li><router-link to="/" >||||||||</router-link></li>
+            <li><router-link to="/">||||||||</router-link></li>
             <li><router-link to="/histoire">Histoire</router-link></li>
             <li><router-link to="/couverture">La couv</router-link></li>
             <li><router-link to="/plat_verso">Le dos</router-link></li>
@@ -39,15 +39,16 @@
         </ul>
       </nav>
     </header>
-  <br>
-  <br>
-
-    <main class="main">
+    <br>
+    <br>
+    <main class="main container">
       <router-view/>
     </main>
-    <footer class="footer">
-      <img alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="!displayLogo">
-      <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
+    <footer class="footer container">
+      <div class="center">
+            <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="!displayLogo">
+            <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
+      </div>     
     </footer>
   </div>
 </template>
@@ -119,6 +120,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+
+/* Article */
+
+article h1 {
+  text-align: center;
 }
 
 /* footer */
