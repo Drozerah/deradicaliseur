@@ -67,10 +67,11 @@ const router = new Router({
 /* PageNotFound redirection */
 
 router.beforeEach((to, from, next) => {
+
     if (!to.matched.length) {
-      next('/')
+        next('/')
     } else {
-      next()
+        next()
     }
 })
 
