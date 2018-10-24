@@ -3,7 +3,7 @@
     <header>
       <!-- App Title -->
       <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
-      <!-- Mobile nav -->
+      <!-- Mobile size nav -->
       <nav class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
           <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
@@ -21,11 +21,11 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
       </nav>
-      <!-- large screen nav -->
-      <div class="center">
+      <!-- Larger than mobile size navigation -->
+      <div class="flex-container">
             <img class="responsive-img" alt="Bandeau du site" src="./assets/bandeau.jpg" v-if="displayLogo">
       </div>
-      <nav class="white flex-container hide-on-med-and-down" role="navigation">
+      <nav class="white  hide-on-small-only flex-container" role="navigation">
         <ul class="nav-1">
             <li><router-link to="/">||||||||</router-link></li>
             <li><router-link to="/histoire">Histoire</router-link></li>
@@ -57,6 +57,7 @@
 import Home from './components/Home.vue'
 import Carousel from './components/Carousel.vue'
 import M from 'materialize-css'
+
 export default {
   name: 'app',
   components: {
