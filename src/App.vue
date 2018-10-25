@@ -60,12 +60,12 @@
 import Home from './components/routes/Home.vue'
 //import Carousel from './components/tools/CarouselExtraits.vue'
 //import Slider from './components/tools/Carousel.vue'
-//import M from 'materialize-css'
+import M from 'materialize-css'
 
 export default {
   name: 'app',
   components: {
-    Home,
+    Home
     //Carousel,
     //CarouselExtraits
   },
