@@ -12,7 +12,7 @@
 
 <script>
 
-import CarouselExtraits from '@/components/CarouselExtraits.vue'
+import CarouselExtraits from '@/components/tools/CarouselExtraits.vue'
 export default {
   name: 'Extraits',
     components: {
