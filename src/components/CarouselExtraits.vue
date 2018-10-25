@@ -1,7 +1,7 @@
 <template>
     <div>  
         <div class="slider-wrapper">
-            <div class="carousel carousel-slider center" ref="slider">
+            <div class="carousel carousel-slider center" ref="carousel">
                 <div class="carousel-fixed-item center">
                     <a class="btn waves-effect white grey-text darken-text-2">button</a>
                 </div>
@@ -28,10 +28,10 @@
 <script>
   import M from 'materialize-css'
   export default {
-    name: 'Slider',
+    name: 'CarouselExtraits',
     mounted () {    
-        new M.Carousel(this.$refs.slider, {
-            //indicators: true,
+        new M.Carousel(this.$refs.carousel, {
+            indicators: true,
             fullWidth: true
         })
     },

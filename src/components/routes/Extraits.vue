@@ -2,7 +2,7 @@
   <article class="extraits">
     <header class="article-header">
       <h1 class="article-title">{{ title }}</h1>
-            <Slider/>
+            <CarouselExtraits/>
             <br>
             <br>
             <br>
@@ -12,11 +12,11 @@
 
 <script>
 
-import Slider from '@/components/Slider.vue'
+import CarouselExtraits from '@/components/CarouselExtraits.vue'
 export default {
   name: 'Extraits',
     components: {
-      Slider
+      CarouselExtraits
   },
   data(){
     return{
