@@ -23,7 +23,7 @@
         </div>
       </nav>
       <!-- Larger than mobile size navigation -->
-      <div class="flex-container logo-top">
+      <div class="logo-top center">
         <img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg" v-if="displayLogo">
       </div>
       <nav class="nav white hide-on-small-only flex-container" role="navigation">
@@ -44,7 +44,7 @@
     </header>
     <br>
     <br>
-    <main class="main container">
+    <main class="main">
       <router-view/>
     </main>
     <footer class="footer container">
