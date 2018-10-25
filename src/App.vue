@@ -59,13 +59,15 @@
 <script>
 import Home from './components/routes/Home.vue'
 import Carousel from './components/Carousel.vue'
+import Slider from './components/Slider.vue'
 import M from 'materialize-css'
 
 export default {
   name: 'app',
   components: {
     Home,
-    Carousel
+    Carousel,
+    Slider
   },
   data(){
     return{
