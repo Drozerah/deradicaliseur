@@ -58,8 +58,8 @@
 
 <script>
 import Home from './components/routes/Home.vue'
-//import Carousel from './components/Carousel.vue'
-//import Slider from './components/Slider.vue'
+//import Carousel from './components/tools/CarouselExtraits.vue'
+//import Slider from './components/tools/Carousel.vue'
 //import M from 'materialize-css'
 
 export default {
@@ -67,7 +67,7 @@ export default {
   components: {
     Home,
     //Carousel,
-    //Slider
+    //CarouselExtraits
   },
   data(){
     return{
