@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <header role="banner">
+    <header class="banner" role="banner">
       <!-- App Title -->
-      <h1 class="site-title" v-show=isSiteTitle>{{ siteTitle }}</h1>
       <!-- Mobile size nav -->
       <nav class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
@@ -22,10 +21,8 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
       </nav>
+      <h1 class="center" v-if="displayLogo"><img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg"></h1>
       <!-- Larger than mobile size navigation -->
-      <div class="center">
-        <img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg" v-if="displayLogo">
-      </div>
       <nav class="nav white hide-on-small-only flex-container" role="navigation">
         <ul>
           <!-- "exact" this link will only be active at `/` -->
@@ -172,6 +169,15 @@ Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série T
     justify-content: center;
     align-items: center;
   }
+
+ .banner h1{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
   /* Header */
 
