@@ -91,7 +91,11 @@ export default {
       footer: 'footer content',
       displayLogo: true,
       copyright: '',
-      editeur: 'Les Editions R.J.T.P.'
+      editeur: 'Les Editions R.J.T.P.',
+      toast:{
+          isToast: true,
+          text: 'Bonjour, je suis le premier rôle de la BD "Le déradicaliseur". J\'interviens là où personne ne veut aller !'
+      },
     }
   },
   mounted(){
@@ -99,6 +103,24 @@ export default {
       new M.Sidenav(this.$refs.sidenav, {
             edge: 'left',
       })
+      // Toast
+      if (this.toast.isToast) {
+          // get toast image url
+          let src = window.location.origin
+          let path = '/img/avatar_100x100.d7492356.jpg'
+          src += path
+          // init toast
+          M.toast({
+              html: `<img class="responsive-img avatar" src="${src}" alt="Avatar"><p>${this.toast.text}</p>`,
+              classes: 'black',
+              displayLength: 6000,
+              completeCallback: () => {
+                  /* eslint-disable */
+                  console.log('CarouselExtraits.vue says : Your toast was dismissed') 
+              } 
+
+          })
+      }
   },
   watch: {
     '$route' () {
@@ -179,4 +201,11 @@ footer a:hover {
     height: 80px;
     border-radius: 50%;
 }
+
+/* Toast */
+
+.toast p {
+    margin-left:20px;
+}
+
 </style>
