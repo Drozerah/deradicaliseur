@@ -50,7 +50,18 @@
     <footer class="footer container">
       <div class="center">
             <img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg" v-if="!displayLogo">
-            <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>      
+            <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>
+            <!-- avatar -->
+<!-- Bonjour, je suis le premier rôle de la BD "Le déradicaliseur".
+J'interviens là où personne ne veut aller, pour rencontrer et parler avec quelqu'un qui est rejeté par presque toute la société, et dont peu savent quoi faire.
+Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série TV. -->
+            <br>
+            <img class="responsive-img avatar z-depth-1" src="@/assets/avatar_100x100.jpg" alt="Avatar">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>   
       </div>     
     </footer>
   </div>
@@ -156,5 +167,12 @@ footer a:hover {
   /* Best accessibility contrast */
   /* background-color:#010300; */
   color: yellow;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 </style>
