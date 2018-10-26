@@ -96,16 +96,24 @@
         }
     }
 
+
+    /* Tablet an up Devices > 600px */
+
+    @media only screen and (min-width: 601px) {
+
+        #carouselExtrait {
+            height: 850px !important;
+            width: 567px !important;
+        }
+    }
+
+
+
     /* Tablet Devices > 600px & <= 992px */
 
     @media only screen and (min-width: 601px) and (max-width: 992px) {
         p {
             color: blue;
-        }
-
-        #carouselExtrait {
-            height: 850px !important;
-            width: 567px !important;
         }
     }
 
@@ -117,10 +125,6 @@
             color: purple;
         }
 
-        #carouselExtrait {
-            height: 850px !important;
-            width: 567px !important;
-        }
     }
 
     /* Large Desktop Devices  > 1200px */
@@ -131,10 +135,6 @@
             color: greenyellow;
         }
 
-        #carouselExtrait {
-            height: 850px !important;
-            width: 567px !important;
-        }
     }
 </style>
 <style>
