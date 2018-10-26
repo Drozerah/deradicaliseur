@@ -68,10 +68,10 @@
             return {
                 imgAlt: 'Le déradicaliseur image BD',
                 items: {
-                    item1: "(extrait planche 45)",
-                    item2: "(planche 24)",
-                    item3: "(planche 71)",
-                    item4: "(planche 40)",
+                    item1: "- extrait planche 45 -",
+                    item2: "- planche 24 -",
+                    item3: "- planche 71 -",
+                    item4: "- planche 40 -",
                 },
                 toast:{
                     isToast: true,
