@@ -136,7 +136,7 @@ export default {
 /* Header */
 
 .logo-top {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 
 /* Navigation */
