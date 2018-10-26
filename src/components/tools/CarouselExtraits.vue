@@ -39,27 +39,6 @@
                 fullWidth: true,
                 noWrap: true
             })
-
-            // Toast
-
-            if (this.toast.isToast) {
-                // get toast image url
-                let src = window.location.origin
-                let path = '/img/avatar_100x100.d7492356.jpg'
-                src += path
-                // init toast
-                M.toast({
-                    html: `<img class="responsive-img avatar" src="${src}" alt="Avatar"><p>${this.toast.text}</p>`,
-                    classes: 'black',
-                    displayLength: 6000,
-                    completeCallback: () => {
-                        /* eslint-disable */
-                       console.log('CarouselExtraits.vue says : Your toast was dismissed') 
-                    } 
-
-                })
-            }
-
         },
         methods: {
 
@@ -72,10 +51,6 @@
                     item2: "- planche 24 -",
                     item3: "- planche 71 -",
                     item4: "- planche 40 -",
-                },
-                toast:{
-                    isToast: true,
-                    text: 'Bonjour, je suis le premier rôle de la BD "Le déradicaliseur". J\'interviens là où personne ne veut aller !'
                 },
                 config: {
                     isBtn:false
@@ -174,7 +149,4 @@
         background-color: yellow;
     }
 
-    .toast p {
-        margin-left:20px;
-    }
 </style>
