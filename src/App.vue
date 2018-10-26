@@ -48,11 +48,8 @@
       <div class="center">
         <img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg" v-if="!displayLogo">
         <div>{{ copyright }} -<a href="http://www.editions-rjtp.com/" target="_blanck">{{ editeur }}</a>-</div>
-        <!-- avatar -->
-        <!-- Bonjour, je suis le premier rôle de la BD "Le déradicaliseur".
-J'interviens là où personne ne veut aller, pour rencontrer et parler avec quelqu'un qui est rejeté par presque toute la société, et dont peu savent quoi faire.
-Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série TV. -->
         <br>
+        <!-- avatar -->
         <img class="responsive-img avatar z-depth-1" src="@/assets/avatar_100x100.jpg" alt="Avatar">
         <br>
         <br>
@@ -80,7 +77,6 @@ Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série T
     data() {
       return {
         siteTitle: 'Le déradicaliseur', // h1
-        isSiteTitle: false, // hidden h1
         displayLogo: true, //  conditional logo rendering
         // nav
         nav: {
@@ -170,6 +166,8 @@ Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série T
     align-items: center;
   }
 
+  /* Header */
+
  .banner h1{
 	margin: 0;
 	padding: 0;
@@ -178,9 +176,6 @@ Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série T
 	font: inherit;
 	vertical-align: baseline;
 }
-
-  /* Header */
-
   /* Navigation */
 
   .nav {
