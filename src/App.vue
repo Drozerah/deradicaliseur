@@ -9,15 +9,15 @@
           <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
             <!-- this link will only be active at `/` -->
-            <router-link to="/" tag="li" active-class="active" exact><a class="sidenav-close">||||||||</a></router-link>
-            <router-link to="/histoire" tag="li" active-class="active"><a class="sidenav-close">Histoire</a></router-link>
-            <router-link to="/couverture" tag="li" active-class="active"><a class="sidenav-close">La couv</a></router-link>
-            <router-link to="/plat_verso" tag="li" active-class="active"><a class="sidenav-close">Le dos</a></router-link>
-            <router-link to="/extraits" tag="li" active-class="active"><a class="sidenav-close">Extraits</a></router-link>
-            <router-link to="/actualites" tag="li" active-class="active"><a class="sidenav-close">Actu</a></router-link>
-            <router-link to="/auteurs" tag="li" active-class="active"><a class="sidenav-close">Auteurs</a></router-link>
-            <router-link to="/bonus" tag="li" active-class="active"><a class="sidenav-close">Bonus</a></router-link>
-            <router-link to="/disponibilites" tag="li" active-class="active"><a class="sidenav-close">Dispo</a></router-link>
+            <router-link to="/" tag="li" active-class="active" exact ><a :class="nav.sidenav">||||||||</a></router-link>
+            <router-link to="/histoire" tag="li" active-class="active" ><a :class="nav.sidenav">Histoire</a></router-link>
+            <router-link to="/couverture" tag="li" active-class="active" ><a :class="nav.sidenav">La couv</a></router-link>
+            <router-link to="/plat_verso" tag="li" active-class="active" ><a :class="nav.sidenav">Le dos</a></router-link>
+            <router-link to="/extraits" tag="li" active-class="active" ><a :class="nav.sidenav">Extraits</a></router-link>
+            <router-link to="/actualites" tag="li" active-class="active" ><a :class="nav.sidenav">Actu</a></router-link>
+            <router-link to="/auteurs" tag="li" active-class="active" ><a :class="nav.sidenav">Auteurs</a></router-link>
+            <router-link to="/bonus" tag="li" active-class="active" ><a :class="nav.sidenav">Bonus</a></router-link>
+            <router-link to="/disponibilites" tag="li" active-class="active" ><a :class="nav.sidenav">Dispo</a></router-link>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
@@ -28,17 +28,17 @@
       </div>
       <nav class="nav white hide-on-small-only flex-container" role="navigation">
         <ul>
-            <!-- this link will only be active at `/` -->
+            <!-- "exact" this link will only be active at `/` -->
             <!-- https://router.vuejs.org/api/#exact -->
-            <router-link to="/" tag="li" active-class="active" exact><a>||||||||</a></router-link>
-            <router-link to="/histoire" tag="li" active-class="active"><a>Histoire</a></router-link>
-            <router-link to="/couverture" tag="li" active-class="active"><a>La couv</a></router-link>
-            <router-link to="/plat_verso" tag="li" active-class="active"><a>Le dos</a></router-link>
-            <router-link to="/extraits" tag="li" active-class="active"><a>Extraits</a></router-link>
-            <router-link to="/actualites" tag="li" active-class="active"><a>Actu</a></router-link>
-            <router-link to="/auteurs" tag="li" active-class="active"><a>Auteurs</a></router-link>
-            <router-link to="/bonus" tag="li" active-class="active"><a>Bonus</a></router-link>
-            <router-link to="/disponibilites" tag="li" active-class="active"><a>Dispo</a></router-link>
+            <router-link to="/" tag="li" active-class="active" exact :class="nav.wavesEffect"><a>||||||||</a></router-link>
+            <router-link to="/histoire" tag="li" active-class="active" :class="nav.wavesEffect"><a>Histoire</a></router-link>
+            <router-link to="/couverture" tag="li" active-class="active" :class="nav.wavesEffect"><a>La couv</a></router-link>
+            <router-link to="/plat_verso" tag="li" active-class="active" :class="nav.wavesEffect"><a>Le dos</a></router-link>
+            <router-link to="/extraits" tag="li" active-class="active" :class="nav.wavesEffect"><a>Extraits</a></router-link>
+            <router-link to="/actualites" tag="li" active-class="active" :class="nav.wavesEffect"><a>Actu</a></router-link>
+            <router-link to="/auteurs" tag="li" active-class="active" :class="nav.wavesEffect"><a>Auteurs</a></router-link>
+            <router-link to="/bonus" tag="li" active-class="active" :class="nav.wavesEffect"><a>Bonus</a></router-link>
+            <router-link to="/disponibilites" tag="li" active-class="active" :class="nav.wavesEffect"><a>Dispo</a></router-link>
         </ul>
       </nav>
     </header>
@@ -84,6 +84,10 @@ export default {
     return{
       siteTitle: 'Le déradicaliseur',
       isSiteTitle: false,
+      nav:{
+        wavesEffect: 'waves-effect waves-yellow',
+        sidenav: 'sidenav-close waves-effect waves-yellow',
+      },
       footer: 'footer content',
       displayLogo: true,
       copyright: '',
