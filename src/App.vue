@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <header class="banner" role="banner">
-      <!-- App Title -->
-      <!-- Mobile size nav -->
-      <nav class="yellow hide-on-med-and-up" role="navigation">
+      
+      <!-- Mobile device sidenav conditional rendering -->
+      <nav v-if="$mq === 'mobile'" class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
             <!-- this link will only be active at `/` -->
@@ -20,6 +20,7 @@
           <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
       </nav>
+      <!-- App Title -->
       <h1 class="center" v-if="displayLogo"><img class="responsive-img" :alt="siteTitle" src="@/assets/bandeau.jpg"></h1>
       <!-- Larger than mobile size navigation -->
       <nav class="nav white hide-on-small-only flex-container" role="navigation">
@@ -41,6 +42,7 @@
     <br>
     <br>
     <main class="main">
+      <div class="center">current device: {{$mq}}</div>    
       <router-view />
     </main>
     <footer class="footer container">
@@ -96,14 +98,21 @@
         },
       }
     },
-    mounted() {
+    updated(){
+
+      // DOM HTML 
+        // Conditional mobile sidenav rendering
+      if (this.$mq === 'mobile') {    
+        // Sidenav instanciation + config position
+        new M.Sidenav(this.$refs.sidenav, {
+          edge: 'left',
+        })
+      }
+    },
+    mounted(){
 
       this.isLogo() // function call
 
-      // Sidenav instanciation + config position
-      new M.Sidenav(this.$refs.sidenav, {
-        edge: 'left',
-      })
       // Toast 
       // get current route name 
       const currentRoute = this.$router.currentRoute.name      
