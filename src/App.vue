@@ -68,7 +68,6 @@ Une vraie mission impossible, mais sans Tom Cruise ni les acteurs de la série T
 </template>
 
 <script>
-import 'materialize-css/dist/css/materialize.min.css'
 import Home from './components/routes/Home.vue'
 //import Carousel from './components/tools/CarouselExtraits.vue'
 //import Slider from './components/tools/Carousel.vue'
