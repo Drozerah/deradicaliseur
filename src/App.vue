@@ -5,7 +5,6 @@
       <!-- Mobile size nav -->
       <nav class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
-          <!-- <a id="logo-container" href="#" class="brand-logo center black-text">Le Déradicaliseur</a> -->
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
             <!-- this link will only be active at `/` -->
             <router-link to="/" tag="li" active-class="active" exact><a :class="nav.sidenav">||||||||</a></router-link>
