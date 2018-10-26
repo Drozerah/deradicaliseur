@@ -1,33 +1,28 @@
 <template>
     <div class="row">
         <div class="flex-container">
-            <!-- <div class="red" style="width:567px;">test</div>
-            <div class="red" style="width:567px;">test</div> -->
-
             <div class="carousel-wrapper z-depth-2">
+                <!-- carousel -->
                 <div class="carousel carousel-slider center" ref="carousel" id="carouselExtrait">
-
-                    <!-- <div class="carousel-fixed-item center">
+                    <div class="carousel-fixed-item center" v-if="config.isBtn">
                         <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                    </div> -->
+                    </div>
                     <div class="carousel-item white-text">
-                        <!-- <h4>First Panel</h4> -->
-                        <img class="responsive-img" alt="Le déradicaliseur image BD" src="@/assets/planche_45_ST.jpg">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_45_ST.jpg">
                         <p class="white-text">{{ items.item1 }}</p>
                     </div>
                     <div class="carousel-item white-text">
-                        <!-- <h4>Second Panel</h4> -->
-                        <img class="responsive-img" alt="Le déradicaliseur image BD" src="@/assets/planche_24_ST.jpg">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_24_ST.jpg">
                         <p class="white-text">{{ items.item2 }}</p>
                     </div>
-                    <!--  <div class="carousel-item green white-text" href="#three!">
-                        <h2>Third Panel</h2>
-                    <p class="white-text">This is your third panel</p>
+                    <div class="carousel-item white-text">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_71_ST.jpg">
+                        <p class="white-text">{{ items.item4 }}</p>
                     </div>
-                    <div class="carousel-item blue white-text" href="#four!">
-                        <h2>Fourth Panel</h2>
-                        <p class="white-text">This is your fourth panel</p>
-                    </div> -->
+                    <div class="carousel-item white-text">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_40_ST.jpg">
+                        <p class="white-text">{{ items.item2 }}</p>
+                    </div>
                 </div>
             </div>
             <p>|||||||||||||</p>
@@ -50,10 +45,15 @@
         },
         data() {
             return {
-                title: 'Ceci est un slider',
+                imgAlt: 'Le déradicaliseur image BD',
                 items: {
                     item1: "(extrait planche 45)",
                     item2: "(planche 24)",
+                    item3: "(planche 71)",
+                    item4: "(planche 40)",
+                },
+                config: {
+                    isBtn:false
                 }
             }
         }
@@ -137,9 +137,10 @@
 
     }
 </style>
-<style>
-    /* Not in scope */
 
+<!-- Add none "scoped" attribute to extend CSS to global app styles -->
+<style>
+    
     #carouselExtrait .indicators .indicator-item {
         background-color: grey;
     }
