@@ -87,7 +87,7 @@
         // footer
         footer: 'footer content', // in case we need
         copyright: null, // default
-        editeur: 'Les Editions R.J.T.P.',
+        editeur: 'Les Editions - Réflechir n\'a Jamaix Tué Personne - R.J.T.P.',
         // toast
         toast: {
           config: {
