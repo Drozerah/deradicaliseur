@@ -3,7 +3,7 @@
     <header class="banner" role="banner">
       
       <!-- Mobile device sidenav conditional rendering -->
-      <nav v-if="$mq === 'mobile'" class="yellow hide-on-med-and-up" role="navigation">
+      <nav class="yellow hide-on-med-and-up" role="navigation">
         <div class="nav-wrapper ">
           <ul id="nav-mobile" class="sidenav" ref="sidenav">
             <!-- this link will only be active at `/` -->
@@ -100,18 +100,18 @@
     },
     updated(){
 
-      // DOM HTML 
-        // Conditional mobile sidenav rendering
-      if (this.$mq === 'mobile') {    
-        // Sidenav instanciation + config position
-        new M.Sidenav(this.$refs.sidenav, {
-          edge: 'left',
-        })
-      }
+      
     },
     mounted(){
 
       this.isLogo() // function call
+
+      // DOM HTML 
+        // Sidenav instanciation + config position
+      new M.Sidenav(this.$refs.sidenav, {
+        edge: 'left',
+      })
+    
 
       // Toast 
       // get current route name 
