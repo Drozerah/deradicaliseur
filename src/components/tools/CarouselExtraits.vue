@@ -8,12 +8,16 @@
                         <a class="btn waves-effect white grey-text darken-text-2">button</a>
                     </div>
                     <div class="carousel-item white-text">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_45_ST.jpg">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/la_couv_01_96dpi.jpg">
                         <p class="white-text">{{ items.item1 }}</p>
                     </div>
                     <div class="carousel-item white-text">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_24_ST.jpg">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_45_ST.jpg">
                         <p class="white-text">{{ items.item2 }}</p>
+                    </div>
+                    <div class="carousel-item white-text">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_24_ST.jpg">
+                        <p class="white-text">{{ items.item3 }}</p>
                     </div>
                     <div class="carousel-item white-text">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_71_ST.jpg">
@@ -21,7 +25,11 @@
                     </div>
                     <div class="carousel-item white-text">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_40_ST.jpg">
-                        <p class="white-text">{{ items.item2 }}</p>
+                        <p class="white-text">{{ items.item5 }}</p>
+                    </div>
+                    <div class="carousel-item white-text">
+                        <img class="responsive-img" :alt="imgAlt" src="@/assets/le_deradicaliseur_dos.jpg">
+                        <p class="white-text">{{ items.item6 }}</p>
                     </div>
                 </div>
             </div>
@@ -47,10 +55,12 @@
             return {
                 imgAlt: 'Le déradicaliseur image BD',
                 items: {
-                    item1: "- extrait planche 45 -",
-                    item2: "- planche 24 -",
-                    item3: "- planche 71 -",
-                    item4: "- planche 40 -",
+                    item1: "- couverture -",
+                    item2: "- extrait planche 45 -",
+                    item3: "- planche 24 -",
+                    item4: "- planche 71 -",
+                    item5: "- planche 40 -",
+                    item6: "- verso -"
                 },
                 config: {
                     isBtn:false
