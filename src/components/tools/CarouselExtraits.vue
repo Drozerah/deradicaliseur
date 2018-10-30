@@ -148,8 +148,10 @@
     width: 350px !important;
 }
 
+/* text content */
 .mobile .text-content{
-    width: 350px;
+    width: 330px;
+    padding:0px 10px 0px 0px;
 }
 
 /* DESKTOP - TABLET - LAPTOP */
@@ -163,6 +165,12 @@
 /* text content */
 .desktop .text-content {
     padding-left: 50px;
+}
+
+/* TABLET LAPTOP */
+/* text content */
+.tablet .text-content, .laptop .text-content {
+    padding:0px 20px 0px 20px;
 }
 
 </style>
