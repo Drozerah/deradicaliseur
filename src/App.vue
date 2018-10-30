@@ -9,11 +9,10 @@
             <!-- this link will only be active at `/` -->
             <router-link to="/" tag="li" active-class="active" exact><a :class="nav.sidenav">||||||||</a></router-link>
             <router-link to="/histoire" tag="li" active-class="active"><a :class="nav.sidenav">Histoire</a></router-link>
-            <router-link to="/entrevue" tag="li" active-class="active"><a :class="nav.sidenav">Entrevue</a></router-link>
-            <router-link to="/plat_verso" tag="li" active-class="active"><a :class="nav.sidenav">Le dos</a></router-link>
             <router-link to="/extraits" tag="li" active-class="active"><a :class="nav.sidenav">Extraits</a></router-link>
-            <router-link to="/actualites" tag="li" active-class="active"><a :class="nav.sidenav">Actu</a></router-link>
+            <router-link to="/entrevue" tag="li" active-class="active"><a :class="nav.sidenav">Entrevue</a></router-link>
             <router-link to="/auteurs" tag="li" active-class="active"><a :class="nav.sidenav">Auteurs</a></router-link>
+            <router-link to="/actualites" tag="li" active-class="active"><a :class="nav.sidenav">Actu</a></router-link>
             <router-link to="/bonus" tag="li" active-class="active"><a :class="nav.sidenav">Bonus</a></router-link>
             <router-link to="/disponibilites" tag="li" active-class="active"><a :class="nav.sidenav">Dispo</a></router-link>
           </ul>
@@ -29,11 +28,10 @@
           <!-- https://router.vuejs.org/api/#exact -->
           <router-link to="/" tag="li" active-class="active" exact :class="nav.wavesEffect"><a>||||||||</a></router-link>
           <router-link to="/histoire" tag="li" active-class="active" :class="nav.wavesEffect"><a>Histoire</a></router-link>
-          <router-link to="/entrevue" tag="li" active-class="active" :class="nav.wavesEffect"><a>Entrevue</a></router-link>
-          <router-link to="/plat_verso" tag="li" active-class="active" :class="nav.wavesEffect"><a>Le dos</a></router-link>
           <router-link to="/extraits" tag="li" active-class="active" :class="nav.wavesEffect"><a>Extraits</a></router-link>
-          <router-link to="/actualites" tag="li" active-class="active" :class="nav.wavesEffect"><a>Actu</a></router-link>
+          <router-link to="/entrevue" tag="li" active-class="active" :class="nav.wavesEffect"><a>Entrevue</a></router-link>
           <router-link to="/auteurs" tag="li" active-class="active" :class="nav.wavesEffect"><a>Auteurs</a></router-link>
+          <router-link to="/actualites" tag="li" active-class="active" :class="nav.wavesEffect"><a>Actu</a></router-link>
           <router-link to="/bonus" tag="li" active-class="active" :class="nav.wavesEffect"><a>Bonus</a></router-link>
           <router-link to="/disponibilites" tag="li" active-class="active" :class="nav.wavesEffect"><a>Dispo</a></router-link>
         </ul>
