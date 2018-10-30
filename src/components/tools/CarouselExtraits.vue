@@ -1,39 +1,57 @@
 <template>
-    <div class="row">
-        <div class="flex-container">
-            <div class="carousel-wrapper z-depth-2">
-                <!-- carousel -->
-                <div class="carousel carousel-slider center" ref="carousel" id="carouselExtrait">
-                    <div class="carousel-fixed-item center" v-if="config.isBtn">
+    <div>
+        <div class="flex-container main-content" :class="$mq">
+            <div class="carousel-wrapper flex-item">
+                <!-- carousel materialize -->
+                <div class="carousel carousel-slider carousel-items z-depth-2" ref="carousel" id="carouselExtrait">
+                    <!-- Items -->
+                    <!-- optional btn -->
+                    <div class="carousel-fixed-item" v-if="config.isBtn">
                         <a class="btn waves-effect white grey-text darken-text-2">button</a>
                     </div>
-                    <div class="carousel-item white-text">
+                    <!-- items img -->
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/la_couv_01_96dpi.jpg">
-                        <p class="white-text">{{ items.item1 }}</p>
+                        <p>{{ items.item1 }}</p>
                     </div>
-                    <div class="carousel-item white-text">
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_45_ST.jpg">
-                        <p class="white-text">{{ items.item2 }}</p>
+                        <p>{{ items.item2 }}</p>
                     </div>
-                    <div class="carousel-item white-text">
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_24_ST.jpg">
-                        <p class="white-text">{{ items.item3 }}</p>
+                        <p>{{ items.item3 }}</p>
                     </div>
-                    <div class="carousel-item white-text">
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_71_ST.jpg">
-                        <p class="white-text">{{ items.item4 }}</p>
+                        <p>{{ items.item4 }}</p>
                     </div>
-                    <div class="carousel-item white-text">
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_40_ST.jpg">
-                        <p class="white-text">{{ items.item5 }}</p>
+                        <p>{{ items.item5 }}</p>
                     </div>
-                    <div class="carousel-item white-text">
+                    <div class="carousel-item">
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/le_deradicaliseur_dos.jpg">
-                        <p class="white-text">{{ items.item6 }}</p>
+                        <p>{{ items.item6 }}</p>
                     </div>
                 </div>
             </div>
-            <p>|||||||||||||</p>
+            <div class="text-content flex-item">
+                <p>Bonjour,
+                <br>
+                <br>
+                comme vous allez pouvoir le constater, <span class="bold">les extraits et les planches disponibles ci-dessous et sur ce site, ne comportent pas les bulles de texte</span> . Pourquoi ?
+                C'est une BD sans bulle ? Non, 94 % des cases en sont pourvues.<br>
+                Est-ce un oubli ?<br>
+                Est-ce par "fourberie" ? Oui et Non.</p>
+
+                <p>Nous avons choisi de ne pas mettre le texte parce qu'il serait forcément sorti de son contexte, et il serait difficile de saisir la progression, la stratégie du déradicaliseur.
+                Pour voir le texte correspondant à chaque image ci-dessous, il faudra donc aller chez votre libraire favori, et au pire, le commander sans savoir de quoi il en retourne. Mais rassurez vous, nous avons travaillé avec beaucoup d'application pour que vous ne regrettiez pas d'avoir cette BD entre les mains. 
+                </p>
+
+                <p>Comme pour la précédente BD "Joanne Lebster, le début d'un nouveau monde", réalisée par Mathieu et Marc, préparez-vous à aller où peu de BDs (de part leur theme) vous ont déjà emmené.
+                :)</p>
+            </div>
         </div>
     </div>
 </template>
@@ -72,85 +90,88 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+    /* FlexBox main element */
     .flex-container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;      
+        flex-wrap: wrap;
     }
 
-    .carousel {
+    .main-content .carousel {
         cursor: pointer;
+        /* default */
+        margin-bottom: 25px;
     }
 
-    .carousel p {
-        padding: 0px;
-        margin: 0px;
-        color: #333 !important;
-    }
+    /* Items */
 
-    img {
+    .main-content .carousel .carousel-item img {
         max-width: 100%;
     }
 
-    /* Mobile Devices <= 600px */
-
-    @media only screen and (max-width: 600px) {
-        p {
-            color: red;
-        }
-
-        #carouselExtrait {
-            height: 560px !important;
-            width: 350px !important;
-        }
+    /* carousel nav */
+    .main-content .carousel .carousel-item p {
+        color:#333;
+        text-align: center;
+        margin: 0px;
     }
 
+    /* Text content */
 
-    /* Tablet an up Devices > 600px */
-
-    @media only screen and (min-width: 601px) {
-
-        #carouselExtrait {
-            height: 850px !important;
-            width: 567px !important;
-        }
+    .main-content .text-content {
+        width: 567px;
+        /* flexBox rule */
+        align-self: flex-start;
+        color: #333;
     }
 
-
-
-    /* Tablet Devices > 600px & <= 992px */
-
-    @media only screen and (min-width: 601px) and (max-width: 992px) {
-        p {
-            color: blue;
-        }
+    .main-content .text-content p .bold {
+        font-weight: 700;
     }
 
-    /* Desktop Devices > 992 & <= 1200px */
+/* RESPONSIVE RULES */
 
-    @media only screen and (min-width: 993px) and (max-width: 1200px) {
+/* 
+    Media Queries Breackpoints :
+    mobile: 600,
+    tablet: 992,
+    laptop: 1200,
+    desktop: Infinity,
+*/
 
-        p {
-            color: purple;
-        }
+/* MOBILE */
+/* carousel size */
+.mobile .carousel{
+    height: 560px !important;
+    width: 350px !important;
+}
 
-    }
+.mobile .text-content{
+    width: 350px;
+}
 
-    /* Large Desktop Devices  > 1200px */
+/* DESKTOP - TABLET - LAPTOP */
+/* carousel size */
+.desktop .carousel, .tablet .carousel, .laptop .carousel {
+    height: 850px !important;
+    width: 567px !important;
+}
 
-    @media only screen and (min-width: 1201px) {
+/* DESKTOP */
+/* text content */
+.desktop .text-content {
+    padding-left: 50px;
+}
 
-        p {
-            color: greenyellow;
-        }
-
-    }
 </style>
 
 <!-- Add none "scoped" attribute to extend CSS to global app styles -->
 <style>
     
+    /* Carousel  */
+
     #carouselExtrait .indicators .indicator-item {
         background-color: grey;
     }
@@ -158,5 +179,4 @@
     #carouselExtrait .indicators .indicator-item.active {
         background-color: yellow;
     }
-
 </style>
