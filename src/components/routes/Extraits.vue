@@ -3,9 +3,6 @@
     <header class="article-header">
       <h1 class="article-title">{{ title }}</h1>
             <CarouselExtraits/>
-            <br>
-            <br>
-            <br>
     </header>
   </article>
 </template>
@@ -20,7 +17,7 @@ export default {
   },
   data(){
     return{
-      title: "Extraits component title"
+      title: "Extraits"
     }
   }
 }
