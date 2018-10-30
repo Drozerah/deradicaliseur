@@ -90,7 +90,7 @@
         toast: {
           config: {
             isToast: true, // conditional toast rendering
-            TimeOut: 3000 // show toast after 
+            TimeOut: 3000 // show toast after
           },    
           text: 'Bonjour, je suis le premier rôle de la BD "Le déradicaliseur". J\'interviens là où personne ne veut aller !' // toast string
         },
@@ -125,7 +125,7 @@
           M.toast({
             // config toast
             html: `<img class="responsive-img avatar" src="${src}" alt="Avatar"><p>${this.toast.text}</p>`,
-            classes: 'black',
+            classes: 'black toast_id_0',
             displayLength: 6000,
             // callback when toast leaves
             completeCallback: () => {
@@ -226,7 +226,15 @@
 
   /* Toast */
 
-  .toast p {
+  .toast_id_0 p {
     margin-left: 20px;
+  }
+
+  .toast_id_0 :hover {
+    cursor: pointer;
+  }
+
+  .toast_id_0 ::selection {
+    background: transparent;
   }
 </style>
