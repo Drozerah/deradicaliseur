@@ -209,10 +209,11 @@
   footer a {
     padding: 5px;
     color: inherit;
+    text-decoration: underline;
   }
 
   footer a:hover {
-    background-color: #CCCCCC;
+    background-color: #333;
     /* Best accessibility contrast */
     /* background-color:#010300; */
     color: yellow;
