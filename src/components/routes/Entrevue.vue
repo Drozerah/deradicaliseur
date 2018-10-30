@@ -1,5 +1,5 @@
 <template>
-  <article class="couverture">
+  <article class="Entrevue">
     <header class="article-header">
       <h1 class="article-title">{{ title }}</h1>
     </header>
@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  name: 'Couverture',
+  name: 'Entrevue',
   data(){
     return{
-      title: "Couverture component title"
+      title: "Entrevue component title"
     }
   }
 }

@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from './components/routes/Home.vue'
 import Histoire from './components/routes/Histoire.vue'
-import Couverture from './components/routes/Couverture.vue'
+import Entrevue from './components/routes/Entrevue.vue'
 import Plat_verso from './components/routes/Plat_verso.vue'
 import Extraits from './components/routes/Extraits.vue'
 import Actualites from './components/routes/Actualites.vue'
@@ -27,9 +27,9 @@ const router = new Router({
             component: Histoire
         },
         {
-            path: '/couverture',
-            name: 'couverture',
-            component: Couverture
+            path: '/entrevue',
+            name: 'entrevue',
+            component: Entrevue
         },
         {
             path: '/plat_verso',
