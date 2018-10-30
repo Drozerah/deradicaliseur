@@ -175,66 +175,68 @@
     .main-content .text-content p .bold {
         font-weight: 700;
     }
+    
     .main-content .text-content .btn {
         text-transform: none;
     }
 
-/* RESPONSIVE RULES */
+    /* RESPONSIVE RULES */
 
-/* 
-    Media Queries Breackpoints :
-    mobile: 600,
-    tablet: 992,
-    laptop: 1200,
-    desktop: Infinity,
-*/
+    /* 
+        Media Queries Breackpoints :
+        mobile: 600,
+        tablet: 992,
+        laptop: 1200,
+        desktop: Infinity,
+    */
 
-/* MOBILE */
-/* carousel size */
-.mobile .carousel{
-    height: 560px !important;
-    width: 350px !important;
-}
+    /* MOBILE */
+    /* carousel size */
+    .mobile .carousel{
+        height: 560px !important;
+        width: 350px !important;
+    }
 
-/* text content */
-.mobile .text-content{
-    width: 330px;
-    padding:0px 10px 0px 0px;
-}
+    /* text content */
+    .mobile .text-content{
+        width: 330px;
+        padding:0px 10px 0px 0px;
+    }
 
-/* DESKTOP - TABLET - LAPTOP */
-/* carousel size */
-.desktop .carousel, .tablet .carousel, .laptop .carousel {
-    height: 850px !important;
-    width: 567px !important;
-}
+    /* DESKTOP - TABLET - LAPTOP */
+    /* carousel size */
+    .desktop .carousel, .tablet .carousel, .laptop .carousel {
+        height: 850px !important;
+        width: 567px !important;
+    }
 
-/* DESKTOP */
-/* text content */
-.desktop .text-content {
-    padding-left: 50px;
-}
+    /* DESKTOP */
+    /* text content */
+    .desktop .text-content {
+        padding-left: 50px;
+    }
 
-/* TABLET LAPTOP */
-/* text content */
-.tablet .text-content, .laptop .text-content {
-    padding:0px 20px 0px 20px;
-}
+    /* TABLET LAPTOP */
+    /* text content */
+    .tablet .text-content, .laptop .text-content {
+        padding:0px 20px 0px 20px;
+    }
 
-/* MODAL */
-#modal1 i{
-    float: right;
-    position: relative;
-    top:10px;
-    right: 10px;
-}
-#modal1 i::selection, #modal1 .modal-content::selection{
-    background: transparent;
-}
+    /* MODAL */
+    #modal1 i{
+        float: right;
+        position: relative;
+        top:10px;
+        right: 10px;
+    }
 
-#modal1 .modal-content {
-    font-size: 20px;
-}
+    #modal1 i::selection, #modal1 .modal-content::selection{
+        background: transparent;
+    }
+
+    #modal1 .modal-content {
+        font-size: 20px;
+    }
 
 </style>
 
