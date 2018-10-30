@@ -90,12 +90,8 @@
         </div>
         <!-- Modal Structure -->
         <div id="modal1" class="modal bottom-sheet black center" ref="modal">
-            <i class="material-icons modal-close white-text">
-                close
-            </i>     
-            <div class="modal-content white-text">
-                    Utilisez les flèches latérales de votre clavier pour visionner les images/extraits
-            </div>
+            <i class="material-icons modal-close white-text">close</i>     
+            <div class="modal-content white-text">Utilisez les flèches latérales de votre clavier pour visionner les images/extraits</div>
         </div>
     </div>
 </template>
@@ -246,7 +242,6 @@
 <style>
     
     /* Carousel  */
-
     #carouselExtrait .indicators .indicator-item {
         background-color: grey;
     }
