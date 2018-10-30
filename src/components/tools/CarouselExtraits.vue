@@ -69,6 +69,34 @@
                 </div>                
             </div>
         </div>
+        <!-- Modal Trigger -->
+        <div data-target="modal1" class="fixed-action-btn modal-trigger" v-if="$mq == 'desktop' || $mq == 'laptop'">
+            <a class="btn-floating btn-large waves-effect waves-light yellow">
+                <i class="material-icons black-text">
+                    <!-- announcement -->
+                    <!-- new_releases -->
+                    <!-- contact_support -->
+                    <!-- settings -->
+                    <!-- live_help -->
+                    <!-- wallpaper -->
+                    <!-- image -->
+                    <!-- add_photo_alternate -->
+                    <!-- photo_library -->
+                    <!-- photo -->
+                    <!-- mms -->
+                    compare_arrows                 
+                </i>
+            </a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal bottom-sheet black center" ref="modal">
+            <i class="material-icons modal-close white-text">
+                close
+            </i>     
+            <div class="modal-content white-text">
+                    Utilisez les flèches latérales de votre clavier pour visionner les images/extraits
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -80,6 +108,11 @@
                 indicators: true,
                 fullWidth: true,
                 noWrap: true
+            })
+            new M.Modal(this.$refs.modal, {
+                opacity:0.2,
+                outDuration:250,
+                preventScrolling: false
             })
         },
         methods: {
@@ -190,6 +223,21 @@
 /* text content */
 .tablet .text-content, .laptop .text-content {
     padding:0px 20px 0px 20px;
+}
+
+/* MODAL */
+#modal1 i{
+    float: right;
+    position: relative;
+    top:10px;
+    right: 10px;
+}
+#modal1 i::selection, #modal1 .modal-content::selection{
+    background: transparent;
+}
+
+#modal1 .modal-content {
+    font-size: 20px;
 }
 
 </style>
