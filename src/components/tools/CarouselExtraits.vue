@@ -1,7 +1,12 @@
 <template>
     <div>
         <div class="flex-container main-content" :class="$mq">
-            <div class="carousel-wrapper flex-item">
+
+            <div class="carousel-wrapper flex-item flex-container">
+                <!-- btn left -->
+                <div class="nav-btn nav-btn-left grey-text">
+                    <i class="material-icons md-45 ">keyboard_arrow_left</i>
+                </div>
                 <!-- carousel materialize -->
                 <div class="carousel carousel-slider carousel-items z-depth-2" ref="carousel" id="carouselExtrait">
                     <!-- Items -->
@@ -34,6 +39,10 @@
                         <img class="responsive-img" :alt="imgAlt" src="@/assets/le_deradicaliseur_dos.jpg">
                         <p>{{ items.item6 }}</p>
                     </div>
+                </div>
+                <!-- btn right -->
+                <div class="nav-btn nav-btn-right grey-text">
+                    <i class="material-icons md-45">keyboard_arrow_right</i>
                 </div>
             </div>
             <div class="text-content flex-item">
@@ -161,6 +170,22 @@
         color:#333;
         text-align: center;
         margin: 0px;
+    }
+
+    /* arrow nav */
+
+    .material-icons.md-45 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .main-content .carousel-wrapper .nav-btn i::selection {
+        background: transparent;
+    }
+    
+    .main-content .carousel-wrapper .nav-btn i:hover {
+        cursor: pointer;
+        color:black;
     }
 
     /* Text content */
