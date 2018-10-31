@@ -154,11 +154,9 @@
                 // move to next item
                 this.CarouselInstance.next()                
             },
-            getKeyCode(e){
-                
+            getKeyCode(e){               
                 // if current route = extraits and media queries = desktop or laptop 
-                if ((this.$router.currentRoute.name === 'extraits') && (this.$mq == 'desktop' || this.$mq == 'laptop')) {
-                    
+                if ((this.$router.currentRoute.name === 'extraits') && (this.$mq == 'desktop' || this.$mq == 'laptop')) {                    
                     // if event key code === 39 (arrow left)
                     if (e.which === 39) {
                         this.next()
@@ -167,9 +165,7 @@
                     if (e.which === 37) {
                         this.prev()
                     }
-
-                }
-                
+                }               
             }
         },
         data() {
@@ -191,10 +187,8 @@
         }
     }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
     /* FlexBox main element */
     .flex-container {
         display: flex;
@@ -319,8 +313,7 @@
 </style>
 
 <!-- Add none "scoped" attribute to extend CSS to global app styles -->
-<style>
-    
+<style>   
     /* Carousel  */
     #carouselExtrait .indicators .indicator-item {
         background-color: grey;
