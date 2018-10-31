@@ -4,8 +4,8 @@
 
             <div class="carousel-wrapper flex-item flex-container">
                 <!-- btn left -->
-                <div class="nav-btn nav-btn-left grey-text" @click="next">
-                    <i class="material-icons md-45 ">keyboard_arrow_left</i>
+                <div class="nav-btn nav-btn-left grey-text" @click="prev">
+                    <i class="material-icons md-45">keyboard_arrow_left</i>
                 </div>
                 <!-- carousel materialize -->
                 <div class="carousel carousel-slider carousel-items z-depth-2" ref="carousel" id="carouselExtrait">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <!-- btn right -->
-                <div class="nav-btn nav-btn-right grey-text" @click="prev">
+                <div class="nav-btn nav-btn-right grey-text" @click="next">
                     <i class="material-icons md-45">keyboard_arrow_right</i>
                 </div>
             </div>
@@ -112,20 +112,44 @@
             new M.Carousel(this.$refs.carousel, {
                 indicators: true,
                 fullWidth: true,
-                noWrap: true
+                noWrap: false // infinite cycle through items
             })
             new M.Modal(this.$refs.modal, {
                 opacity:0.2,
                 outDuration:250,
                 preventScrolling: false
             })
+
+            // launch auto cycle (config)
+            if(this.config.isStartCycle === true){
+                // set carousel auto first item
+                this.CarouselInstance.set(1)
+                // then return to item 1
+                setTimeout(()=>{ 
+                    this.CarouselInstance.set(0) 
+                }, 1500)
+            }
+        },
+        computed:{
+            // get data object items length
+            carouselItemsLength(){
+                return Object.keys(this.items).length
+            },
+            // get carousel instance
+            CarouselInstance(){
+                return M.Carousel.getInstance(this.$refs.carousel)
+            }
         },
         methods: {
             prev(){
                 //alert('prev')
+                // move to next item
+                this.CarouselInstance.prev()
             },
             next(){
                 //alert('next')
+                // move to next item
+                this.CarouselInstance.next()                
             }
         },
         data() {
@@ -140,7 +164,8 @@
                     item6: "- verso -"
                 },
                 config: {
-                    isBtn:false
+                    isBtn: false,
+                    isStartCycle: true
                 }
             }
         }
