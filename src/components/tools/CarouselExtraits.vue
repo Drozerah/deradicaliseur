@@ -4,7 +4,7 @@
 
             <div class="carousel-wrapper flex-item flex-container">
                 <!-- btn left -->
-                <div class="nav-btn nav-btn-left grey-text" @click="prev" v-show="$mq != 'mobile' ">
+                <div class="nav-btn nav-btn-left grey-text" @click="prev" v-show="$mq == 'laptop' || $mq == 'desktop'">
                     <i class="material-icons md-45">keyboard_arrow_left</i>
                 </div>
                 <!-- carousel materialize -->
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <!-- btn right -->
-                <div class="nav-btn nav-btn-right grey-text" @click="next" v-show="$mq != 'mobile'">
+                <div class="nav-btn nav-btn-right grey-text" @click="next" v-show="$mq == 'laptop' || $mq == 'desktop'">
                     <i class="material-icons md-45">keyboard_arrow_right</i>
                 </div>
             </div>
