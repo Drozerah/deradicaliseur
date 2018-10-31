@@ -100,7 +100,7 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal bottom-sheet black center" ref="modal">
             <i class="material-icons modal-close white-text">close</i>     
-            <div class="modal-content white-text">Utilisez les flèches latérales de votre clavier pour visionner les images/extraits</div>
+            <div class="modal-content white-text">Utilisez les flèches latérales de votre clavier <b class="material-icons white-text">arrow_left</b><b class="material-icons white-text">arrow_right</b> pour visionner les images/extraits</div>
         </div>
     </div>
 </template>
@@ -158,7 +158,7 @@
                 
                 // if current route = extraits
                 if (this.$router.currentRoute.name === 'extraits') {
-                    e.preventDefault()
+                   //e.preventDefault()
                     
                     // if event key code === 39 (arrow left)
                     if (e.which === 39) {
@@ -313,6 +313,9 @@
 
     #modal1 .modal-content {
         font-size: 20px;
+    }
+    #modal1 .modal-content b {
+        vertical-align: -6px;
     }
 
 </style>
