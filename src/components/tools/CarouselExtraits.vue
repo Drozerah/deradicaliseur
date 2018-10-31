@@ -109,17 +109,18 @@
     export default {
         name: 'CarouselExtraits',
         mounted() {
+            // init carousel
             new M.Carousel(this.$refs.carousel, {
                 indicators: true,
                 fullWidth: true,
                 noWrap: false // infinite cycle through items
             })
+            // init modal
             new M.Modal(this.$refs.modal, {
                 opacity:0.2,
                 outDuration:250,
                 preventScrolling: false
             })
-
             // launch auto cycle (config)
             if(this.config.isStartCycle === true){
                 // set carousel auto first item
@@ -129,6 +130,8 @@
                     this.CarouselInstance.set(0) 
                 }, 1500)
             }
+            //
+            window.addEventListener('keydown', this.getKeyCode)
         },
         computed:{
             // get data object items length
@@ -150,6 +153,25 @@
                 //alert('next')
                 // move to next item
                 this.CarouselInstance.next()                
+            },
+            getKeyCode(e){
+                
+                // if current route = extraits
+                if (this.$router.currentRoute.name === 'extraits') {
+                    e.preventDefault()
+                    
+                    // if event key code === 39 (arrow left)
+                    if (e.which === 39) {
+                        //alert(`${e.which} --- ${this.$router.currentRoute.name}` )
+                        this.next()
+                    }
+                    if (e.which === 37) {
+                        //alert(`${e.which} --- ${this.$router.currentRoute.name}` )
+                        this.prev()
+                    }
+
+                }
+                
             }
         },
         data() {
