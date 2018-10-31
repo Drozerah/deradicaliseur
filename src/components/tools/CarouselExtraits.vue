@@ -156,17 +156,15 @@
             },
             getKeyCode(e){
                 
-                // if current route = extraits
-                if (this.$router.currentRoute.name === 'extraits') {
-                   //e.preventDefault()
+                // if current route = extraits and media queries = desktop or laptop 
+                if ((this.$router.currentRoute.name === 'extraits') && (this.$mq == 'desktop' || this.$mq == 'laptop')) {
                     
                     // if event key code === 39 (arrow left)
                     if (e.which === 39) {
-                        //alert(`${e.which} --- ${this.$router.currentRoute.name}` )
                         this.next()
                     }
+                    // if event key code === 39 (arrow left)
                     if (e.which === 37) {
-                        //alert(`${e.which} --- ${this.$router.currentRoute.name}` )
                         this.prev()
                     }
 
