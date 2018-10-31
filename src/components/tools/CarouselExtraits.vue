@@ -4,7 +4,7 @@
 
             <div class="carousel-wrapper flex-item flex-container">
                 <!-- btn left -->
-                <div class="nav-btn nav-btn-left grey-text" @click="prev" v-show="$mq == 'laptop' || $mq == 'desktop'">
+                <div class="nav-btn nav-btn-left black-text" @click="prev" v-show="$mq == 'laptop' || $mq == 'desktop'">
                     <i class="material-icons md-45">keyboard_arrow_left</i>
                 </div>
                 <!-- carousel materialize -->
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <!-- btn right -->
-                <div class="nav-btn nav-btn-right grey-text" @click="next" v-show="$mq == 'laptop' || $mq == 'desktop'">
+                <div class="nav-btn nav-btn-right black-text" @click="next" v-show="$mq == 'laptop' || $mq == 'desktop'">
                     <i class="material-icons md-45">keyboard_arrow_right</i>
                 </div>
             </div>
@@ -227,9 +227,16 @@
         background: transparent;
     }
 
+    /* .nav-btn transition */
+    .main-content .carousel-wrapper .nav-btn i {
+        opacity :0.5;
+        transition: opacity .6s;
+    }
+    
     .main-content .carousel-wrapper .nav-btn i:hover {
         cursor: pointer;
-        color:black;
+        opacity: 1;
+        transition: opacity .4s;
     }
 
     /* Text content */
