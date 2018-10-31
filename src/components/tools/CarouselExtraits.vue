@@ -49,7 +49,7 @@
                 <p>Bonjour,
                 <br>
                 <br>
-                comme vous allez pouvoir le constater, <span class="bold">les extraits et les planches disponibles <span v-if="$mq =='desktop'">ci-contre</span><span v-else>ci-dessus</span> et sur ce site, ne comportent pas les bulles de texte</span>. Pourquoi ?
+                Comme vous allez pouvoir le constater, <span class="bold">les extraits et les planches disponibles <span v-if="$mq =='desktop'">ci-contre</span><span v-else>ci-dessus</span> et sur ce site, ne comportent pas les bulles de texte</span>. Pourquoi ?
                 C'est une BD sans bulle ? Non, 94 % des cases en sont pourvues.<br>
                 Est-ce un oubli ?<br>
                 Est-ce par "fourberie" ? Oui et Non.</p>
