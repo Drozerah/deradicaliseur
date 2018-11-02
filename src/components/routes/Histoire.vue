@@ -79,7 +79,4 @@ export default {
   padding-bottom: 15px;
 }
 
-.content .btn {
-  text-transform: none;
-}
 </style>

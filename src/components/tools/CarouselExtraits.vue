@@ -283,10 +283,6 @@
         font-weight: 700;
     }
     
-    .main-content .text-content .btn {
-        text-transform: none;
-    }
-
     /* RESPONSIVE RULES */
 
     /* 

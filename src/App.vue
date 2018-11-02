@@ -208,6 +208,10 @@
     font-size: 25px;
   }
 
+  article .btn {
+        text-transform: none;
+  }
+
   /* Footer */
 
   footer {
