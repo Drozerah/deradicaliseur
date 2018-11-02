@@ -61,7 +61,11 @@ const router = new Router({
             name: 'disponibilites',
             component: Dispo
         }
-    ]
+    ],
+    // scroll to top @{doc} /> https://router.vuejs.org/guide/advanced/scroll-behavior.html
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    }
 })
 
 /* PageNotFound redirection */
