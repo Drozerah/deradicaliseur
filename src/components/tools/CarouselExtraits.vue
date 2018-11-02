@@ -4,7 +4,6 @@
             class="flex-container main-content" 
             :class="$mq"
         >
-
             <div class="carousel-wrapper flex-item flex-container">
                 <!-- btn left -->
                 <div 
@@ -231,7 +230,6 @@
     .main-content .carousel {
         cursor: pointer;
         /* default */
-        margin-bottom: 25px;
     }
 
     /* Items */
