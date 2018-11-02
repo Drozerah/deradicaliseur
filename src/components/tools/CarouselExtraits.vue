@@ -1,47 +1,88 @@
 <template>
     <div>
-        <div class="flex-container main-content" :class="$mq">
+        <div 
+            class="flex-container main-content" 
+            :class="$mq"
+        >
 
             <div class="carousel-wrapper flex-item flex-container">
                 <!-- btn left -->
-                <div class="nav-btn nav-btn-left black-text" @click="prev" v-show="$mq == 'laptop' || $mq == 'desktop'">
+                <div 
+                    class="nav-btn nav-btn-left black-text" 
+                    v-show="$mq == 'laptop' || $mq == 'desktop'"
+                    @click="prev" 
+                >
                     <i class="material-icons md-45">keyboard_arrow_left</i>
                 </div>
                 <!-- carousel materialize -->
-                <div class="carousel carousel-slider carousel-items z-depth-2" ref="carousel" id="carouselExtrait">
+                <div class="carousel carousel-slider carousel-items z-depth-2" 
+                    id="carouselExtrait"
+                    ref="carousel" 
+                >
                     <!-- Items -->
                     <!-- optional btn -->
-                    <div class="carousel-fixed-item" v-if="config.isBtn">
+                    <div 
+                        class="carousel-fixed-item" 
+                        v-if="config.isBtn"
+                    >
                         <a class="btn waves-effect white grey-text darken-text-2">button</a>
                     </div>
                     <!-- items img -->
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/la_couv_01_96dpi.jpg">
+                        <img 
+                            class="responsive-img" 
+                            src="@/assets/la_couv_01_96dpi.jpg"
+                            :alt="imgAlt" 
+                        >
                         <p>{{ items.item1 }}</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_45_ST.jpg">
+                        <img 
+                            class="responsive-img" 
+                            src="@/assets/planche_45_ST.jpg"
+                            :alt="imgAlt" 
+                        >
                         <p>{{ items.item2 }}</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_24_ST.jpg">
+                        <img 
+                            class="responsive-img" 
+                            src="@/assets/planche_24_ST.jpg"
+                            :alt="imgAlt" 
+                        >
                         <p>{{ items.item3 }}</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_71_ST.jpg">
+                        <img 
+                        class="responsive-img" 
+                        src="@/assets/planche_71_ST.jpg"
+                        :alt="imgAlt" 
+                    >
                         <p>{{ items.item4 }}</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/planche_40_ST.jpg">
+                        <img 
+                            class="responsive-img" 
+                            src="@/assets/planche_40_ST.jpg"
+                            :alt="imgAlt" 
+                        >
                         <p>{{ items.item5 }}</p>
                     </div>
                     <div class="carousel-item">
-                        <img class="responsive-img" :alt="imgAlt" src="@/assets/le_deradicaliseur_dos.jpg">
+                        <img 
+                            class="responsive-img" 
+                            src="@/assets/le_deradicaliseur_dos.jpg"
+                            :alt="imgAlt" 
+                        >
                         <p>{{ items.item6 }}</p>
                     </div>
                 </div>
                 <!-- btn right -->
-                <div class="nav-btn nav-btn-right black-text" @click="next" v-show="$mq == 'laptop' || $mq == 'desktop'">
+                <div 
+                    class="nav-btn nav-btn-right black-text" 
+                    v-show="$mq == 'laptop' || $mq == 'desktop'"
+                    @click="next" 
+                >
                     <i class="material-icons md-45">keyboard_arrow_right</i>
                 </div>
             </div>
@@ -79,7 +120,11 @@
             </div>
         </div>
         <!-- Modal Trigger -->
-        <div data-target="modal1" class="fixed-action-btn modal-trigger" v-if="$mq == 'desktop' || $mq == 'laptop'">
+        <div 
+            data-target="modal1" 
+            class="fixed-action-btn modal-trigger" 
+            v-if="$mq == 'desktop' || $mq == 'laptop'"
+        >
             <a class="btn-floating btn-large waves-effect waves-light yellow">
                 <i class="material-icons black-text">
                     <!-- announcement -->
@@ -98,7 +143,10 @@
             </a>
         </div>
         <!-- Modal Structure -->
-        <div id="modal1" class="modal bottom-sheet black center" ref="modal">
+        <div id="modal1" 
+            class="modal bottom-sheet black center" 
+            ref="modal"
+        >
             <i class="material-icons modal-close white-text">close</i>     
             <div class="modal-content white-text">Utilisez les flèches latérales de votre clavier <b class="material-icons white-text">arrow_left</b><b class="material-icons white-text">arrow_right</b> pour visionner les images/extraits</div>
         </div>
