@@ -159,6 +159,11 @@
   }
 </script>
 
+<style scoped>
+
+</style>
+
+
 <style>
   #app {
     margin-top: 0px;
@@ -200,6 +205,7 @@
 
   article h1 {
     text-align: center;
+    font-size: 25px;
   }
 
   /* Footer */
