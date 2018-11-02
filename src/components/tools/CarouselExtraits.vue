@@ -28,53 +28,17 @@
                         <a class="btn waves-effect white grey-text darken-text-2">button</a>
                     </div>
                     <!-- items img -->
-                    <div class="carousel-item">
-                        <img 
-                            class="responsive-img" 
-                            src="@/assets/la_couv_01_96dpi.jpg"
-                            :alt="imgAlt" 
-                        >
-                        <p>{{ items.item1 }}</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            class="responsive-img" 
-                            src="@/assets/planche_45_ST.jpg"
-                            :alt="imgAlt" 
-                        >
-                        <p>{{ items.item2 }}</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            class="responsive-img" 
-                            src="@/assets/planche_24_ST.jpg"
-                            :alt="imgAlt" 
-                        >
-                        <p>{{ items.item3 }}</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                        class="responsive-img" 
-                        src="@/assets/planche_71_ST.jpg"
-                        :alt="imgAlt" 
+                    <div v-for="item in items" 
+                        :key="item.id"
                     >
-                        <p>{{ items.item4 }}</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            class="responsive-img" 
-                            src="@/assets/planche_40_ST.jpg"
-                            :alt="imgAlt" 
-                        >
-                        <p>{{ items.item5 }}</p>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            class="responsive-img" 
-                            src="@/assets/le_deradicaliseur_dos.jpg"
-                            :alt="imgAlt" 
-                        >
-                        <p>{{ items.item6 }}</p>
+                        <div class="carousel-item">
+                            <img 
+                                class="responsive-img"
+                                :src="item.src"
+                                :alt="imgAlt" 
+                            >
+                            <p>- {{ item.title }} -</p>
+                        </div>
                     </div>
                 </div>
                 <!-- btn right -->
@@ -116,7 +80,7 @@
                 </p>    
                 <div class="center">
                     <router-link to="entrevue" class="btn waves-effect waves-yellow grey lighten-1 black-text darken-text-2">Interview présentation de l'ouvrage</router-link>
-                </div>                
+                </div>
             </div>
         </div>
         <!-- Modal Trigger -->
@@ -218,15 +182,34 @@
         },
         data() {
             return {
-                imgAlt: 'Le déradicaliseur image BD',
-                items: {
-                    item1: "- couverture -",
-                    item2: "- extrait planche 45 -",
-                    item3: "- planche 24 -",
-                    item4: "- planche 71 -",
-                    item5: "- planche 40 -",
-                    item6: "- verso -"
-                },
+                imgAlt: 'Le déradicaliseur image BD', 
+                    items: [
+                    { 
+                        title: "couverture",
+                        src: require('@/assets/la_couv_01_96dpi.jpg')
+                                        
+                    },
+                    {  
+                        title: "extrait planche 45",
+                        src: require('@/assets/planche_45_ST.jpg')
+                    },
+                    {   
+                        title: "planche 24",
+                        src: require('@/assets/planche_24_ST.jpg')
+                    },
+                    {   
+                        title: "planche 71",
+                        src: require('@/assets/planche_71_ST.jpg')
+                    },
+                    {   
+                        title: "planche 40",
+                        src: require('@/assets/planche_40_ST.jpg')
+                    },
+                    {   
+                        title: "verso",
+                        src: require('@/assets/le_deradicaliseur_dos.jpg')
+                    }                    
+                    ],
                 config: {
                     isBtn: false,
                     isStartCycle: true
