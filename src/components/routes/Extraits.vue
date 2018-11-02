@@ -1,9 +1,9 @@
 <template>
   <article class="extraits">
     <header class="article-header">
-      <h1 class="article-title">{{ title }}</h1>
-            <CarouselExtraits/>
+      <h1 class="article-title">{{ title }}</h1>          
     </header>
+    <CarouselExtraits/>
   </article>
 </template>
 
