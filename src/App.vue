@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <header class="banner" role="banner">
       
       <!-- Mobile device sidenav conditional rendering -->
@@ -162,6 +162,10 @@
 <style>
   #app {
     margin-top: 0px;
+  }
+
+  [v-cloak] {
+    display: none
   }
 
   /* General */
