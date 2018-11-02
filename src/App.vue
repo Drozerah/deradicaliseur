@@ -206,6 +206,7 @@
   article h1 {
     text-align: center;
     font-size: 25px;
+    margin: 2.8rem 0 2.8rem 0;
   }
 
   article .btn {
