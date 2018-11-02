@@ -31,10 +31,7 @@
       </div>
       </div>
       <br>
-
     </div>
-
-
   </article>
 </template>
 
@@ -68,13 +65,14 @@ export default {
 
 .text-content {
   margin-top: 0px;
+  padding-top: 0px;
 }
 
-.mobile .flex-item{
+.mobile .flex-item {
   width: 350px;
 }
 
-.img-card{
+.img-card {
   /* padding: 10px 10px 20px 10px; */
   padding-bottom: 15px;
 }
